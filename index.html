@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Direct queue links for Xiang Xiang Hunan Cuisine 湘香湖南菜 outlets in Singapore — search your outlet and join its queue on inline.app in one tap. 7 outlets still need their queue link — help us find them." />
+    <meta property="og:title" content="Xiang Xiang Singapore Queue Links — Search & Join the Queue" />
+    <meta property="og:description" content="One-tap inline.app queue links for Xiang Xiang Hunan Cuisine outlets across Singapore. 15 verified, 7 wanted — contribute the missing ones." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b4f35'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23f3e8d2' font-family='serif' font-weight='700'%3E%E6%B9%98%3C/text%3E%3C/svg%3E" />
+    <title>Xiang Xiang Singapore Queue Links — Search &amp; Join the Queue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+    <style>
+      :root{
+        color-scheme:light;
+        --bg:#f7f5ee; --bg-raise:#fffdf7; --bg-soft:#f0ecdd;
+        --ink:#1d241c; --ink-soft:#4c554a; --ink-faint:#7e887c;
+        --line:#e2dcc8; --line-strong:#c6bb9c;
+        --green:#0b4f35; --green-deep:#073a26; --green-hover:#0a4530; --green-tint:#e3efe6;
+        --chili:#b02318; --chili-deep:#8c1a12; --chili-tint:#fae9e5;
+        --gold:#b8862b; --gold-tint:#f3e8d2;
+        --chip-bg:#fffdf7;
+        --shadow-sm:0 1px 2px rgba(46,52,24,.06),0 4px 14px -6px rgba(46,52,24,.18);
+        --shadow:0 2px 4px rgba(46,52,24,.06),0 16px 36px -18px rgba(46,52,24,.35);
+        --shadow-search:0 8px 30px -8px rgba(7,58,38,.30),0 2px 8px rgba(46,52,24,.10);
+        --hero-grad:linear-gradient(165deg,#fbf8ef 0%,#f1ecd8 55%,#e7dcbc 100%);
+        --radius:16px; --radius-sm:10px;
+      }
+      @media (prefers-color-scheme:dark){
+        :root{color-scheme:dark;--bg:#12160f;--bg-raise:#1d2317;--bg-soft:#262d1e;--ink:#f0ead6;--ink-soft:#c9c3ab;--ink-faint:#98937c;--line:#343a28;--line-strong:#525a3c;--green:#4cc084;--green-deep:#7ad3a4;--green-hover:#7ad3a4;--green-tint:#1c3226;--chili:#f0776e;--chili-deep:#f0776e;--chili-tint:#3d1d1a;--gold:#d9a94e;--gold-tint:#38301d;--chip-bg:#1d2317;--shadow-sm:0 1px 2px rgba(0,0,0,.4),0 4px 14px -6px rgba(0,0,0,.5);--shadow:0 2px 4px rgba(0,0,0,.4),0 16px 36px -18px rgba(0,0,0,.85);--shadow-search:0 8px 30px -8px rgba(0,0,0,.7),0 2px 8px rgba(0,0,0,.4);--hero-grad:linear-gradient(165deg,#1c2315 0%,#232b16 55%,#2f3617 100%)}
+      }
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{margin:0;background:var(--bg);color:var(--ink);font-family:"Public Sans",-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+      a{color:var(--green)}
+      ::selection{background:var(--green);color:#fff}
+      button{font:inherit}
+      input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
+      .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+      .wrap-narrow{max-width:820px;margin:0 auto;padding:0 20px}
+      mark{background:var(--gold-tint);color:inherit;border-radius:3px;padding:0 1px}
+
+      /* Top bar */
+      .topbar{position:relative;z-index:5;background:var(--bg-raise);border-bottom:1px solid var(--line)}
+      .topbar-inner{display:flex;align-items:center;gap:10px;padding:10px 20px}
+      .topbar-brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:15px}
+      .topbar-brand small{display:block;font-weight:600;font-size:11px;color:var(--ink-faint);letter-spacing:.04em}
+      .seal{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:9px;background:var(--green);color:#f3e8d2;font-family:"Noto Serif SC",serif;font-weight:900;font-size:19px;flex:none}
+      @media (prefers-color-scheme:dark){.seal{color:#12241a}}
+      .pill{margin-left:auto;font-size:12px;font-weight:600;color:var(--ink-soft);background:var(--bg-soft);border:1px solid var(--line);border-radius:999px;padding:6px 11px;display:inline-flex;align-items:center;gap:7px}
+      .pill i{width:7px;height:7px;border-radius:50%;background:var(--chili);display:inline-block}
+
+      /* Hero */
+      .hero{background:var(--hero-grad);border-bottom:1px solid var(--line)}
+      .hero-inner{padding:38px 20px 26px;text-align:center}
+      .brandline{letter-spacing:.22em;font-size:12px;font-weight:700;color:var(--gold);margin:0 0 10px}
+      .hero h1{font-size:44px;line-height:1.12;margin:0 0 12px;font-weight:800;letter-spacing:-.01em}
+      .hero h1 .accent{color:var(--green)}
+      .hero .lede{font-size:17px;color:var(--ink-soft);margin:0 auto 22px;max-width:620px}
+      .search-card{background:var(--bg-raise);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow-search);padding:14px;text-align:left}
+      .search-main{position:relative}
+      .search-ic{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--ink-faint);pointer-events:none}
+      .search-main input{width:100%;font:inherit;font-size:18px;padding:15px 74px 15px 44px;border:1px solid var(--line-strong);border-radius:14px;background:var(--bg);color:var(--ink);outline:none}
+      .search-main input:focus{border-color:var(--green);box-shadow:0 0 0 3px var(--green-tint)}
+      .clear-btn{position:absolute;right:38px;top:50%;transform:translateY(-50%);border:0;background:none;font-size:22px;line-height:1;color:var(--ink-faint);cursor:pointer;padding:4px;display:none}
+      .clear-btn.on{display:block}
+      .kbd{position:absolute;right:13px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--ink-faint);border:1px solid var(--line-strong);border-bottom-width:2px;border-radius:6px;padding:1px 7px;background:var(--bg-raise)}
+      .search-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin-top:11px}
+      .result-count{margin:0;font-size:13.5px;color:var(--ink-soft)}
+      .result-count b{color:var(--ink)}
+      .popular{margin-left:auto;font-size:13px;color:var(--ink-faint);display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+      .popular button{border:0;background:none;color:var(--green);font-weight:600;cursor:pointer;padding:2px 4px;font-size:13px}
+      .popular button:hover{text-decoration:underline}
+      .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+      .chip{border:1px solid var(--line-strong);background:var(--chip-bg);color:var(--ink-soft);border-radius:999px;padding:7px 13px;font-size:13.5px;font-weight:600;cursor:pointer}
+      .chip .n{opacity:.65;font-weight:600}
+      .chip[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
+      @media (prefers-color-scheme:dark){.chip[aria-pressed="true"]{color:#12241a}}
+      .chip.wanted-chip{border-style:dashed}
+      .steps{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;margin:20px 0 0;padding:0;font-size:14px;color:var(--ink-soft)}
+      .steps b{display:inline-flex;align-items:center;justify-content:center;width:21px;height:21px;border-radius:50%;background:var(--green);color:#fff;font-size:12px;margin-right:7px;vertical-align:-5px}
+      @media (prefers-color-scheme:dark){.steps b{color:#12241a}}
+      .hero-cta{margin:16px 0 0;font-size:14px;color:var(--ink-soft)}
+      .hero-cta a{font-weight:700}
+
+      /* Sticky search */
+      .sticky-bar{position:fixed;top:0;left:0;right:0;z-index:20;background:var(--bg-raise);border-bottom:1px solid var(--line);box-shadow:var(--shadow-sm);transform:translateY(-110%);transition:transform .25s ease}
+      .sticky-bar.on{transform:none}
+      .sticky-inner{display:flex;align-items:center;gap:10px;padding:9px 20px}
+      .sticky-inner .seal{width:28px;height:28px;font-size:15px;border-radius:7px}
+      .sticky-inner input{flex:1;font:inherit;font-size:15.5px;padding:9px 13px;border:1px solid var(--line-strong);border-radius:10px;background:var(--bg);color:var(--ink);outline:none;min-width:0}
+      .sticky-count{font-size:13px;color:var(--ink-soft);white-space:nowrap}
+
+      /* Groups & cards */
+      main{padding:10px 0 8px}
+      .group{margin-top:26px}
+      .group-head{display:flex;align-items:baseline;gap:10px;margin-bottom:13px}
+      .group-head h2{font-size:21px;margin:0;font-weight:800}
+      .group-head .count{font-size:13px;color:var(--ink-faint)}
+      .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+      .card{background:var(--bg-raise);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:17px 18px 15px;display:flex;flex-direction:column;gap:7px}
+      .card.missing{border-style:dashed;border-color:var(--line-strong);background:var(--bg-soft)}
+      .card-top{display:flex;align-items:flex-start;gap:8px}
+      .card h3{font-size:18.5px;margin:0;line-height:1.3;font-weight:800}
+      .badge{flex:none;font-size:11px;font-weight:700;letter-spacing:.03em;border-radius:999px;padding:3px 9px;margin-top:3px}
+      .badge.region{background:var(--bg-soft);color:var(--ink-soft);border:1px solid var(--line)}
+      .badge.ok{background:var(--green-tint);color:var(--green-deep)}
+      .badge.wanted{background:var(--chili-tint);color:var(--chili-deep)}
+      @media (prefers-color-scheme:dark){.badge.ok{color:var(--green-deep)}.badge.wanted{color:var(--chili-deep)}}
+      .star{margin-left:auto;flex:none;border:0;background:none;font-size:21px;line-height:1;color:var(--line-strong);cursor:pointer;padding:2px}
+      .star.on{color:var(--gold)}
+      .addr{margin:0;font-size:14.5px;color:var(--ink-soft)}
+      .phone{margin:0;font-size:14px;color:var(--ink-soft)}
+      .phone a{color:var(--ink-soft);text-decoration:none;font-weight:600}
+      .card-actions{margin-top:auto;padding-top:9px;display:flex;flex-direction:column;gap:9px}
+      .join-btn{display:block;text-align:center;background:var(--chili);color:#fff;font-weight:800;font-size:16px;border-radius:12px;padding:13px 14px;text-decoration:none;box-shadow:var(--shadow-sm)}
+      .join-btn:hover{background:var(--chili-deep)}
+      .contrib-btn{display:block;text-align:center;background:var(--bg-raise);color:var(--chili-deep);border:1.5px dashed var(--chili);font-weight:800;font-size:15.5px;border-radius:12px;padding:12px 14px;text-decoration:none}
+      .contrib-btn:hover{background:var(--chili-tint)}
+      @media (prefers-color-scheme:dark){.contrib-btn{color:var(--chili-deep)}}
+      .sub-actions{display:flex;flex-wrap:wrap;gap:5px 14px;font-size:13.5px}
+      .sub-actions a,.sub-actions button{color:var(--green);font-weight:600;text-decoration:none;border:0;background:none;cursor:pointer;padding:0;font-size:13.5px}
+      .sub-actions a:hover,.sub-actions button:hover{text-decoration:underline}
+      .copied{color:var(--gold)!important}
+      .missing-note{margin:0;font-size:13.5px;color:var(--ink-faint)}
+
+      /* Empty state */
+      .empty{display:none;text-align:center;padding:44px 20px 30px}
+      .empty.on{display:block}
+      .empty .big{font-size:40px;margin:0}
+      .empty h2{margin:8px 0 6px;font-size:21px}
+      .empty p{color:var(--ink-soft);margin:0 auto 14px;max-width:440px}
+      .empty button{border:1px solid var(--green);background:var(--green);color:#fff;border-radius:10px;padding:10px 18px;font-weight:700;cursor:pointer}
+      @media (prefers-color-scheme:dark){.empty button{color:#12241a}}
+
+      /* Contribute */
+      .contribute{margin:38px 0 6px;background:var(--bg-raise);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:26px 28px}
+      .contribute h2{margin:0 0 6px;font-size:24px;font-weight:800}
+      .contribute h2 .accent{color:var(--chili)}
+      .contribute p{color:var(--ink-soft);margin:0 0 12px}
+      .contribute ol{margin:0 0 16px;padding-left:21px;color:var(--ink-soft)}
+      .contribute ol li{margin-bottom:6px}
+      .contribute .cta-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+      .cta-btn{display:inline-block;background:var(--green);color:#fff;font-weight:800;border-radius:12px;padding:13px 20px;text-decoration:none}
+      @media (prefers-color-scheme:dark){.cta-btn{color:#12241a}}
+      .cta-btn:hover{background:var(--green-hover)}
+      .contribute .fine{font-size:13px;color:var(--ink-faint);margin:12px 0 0}
+
+      footer{border-top:1px solid var(--line);margin-top:34px;padding:22px 0 34px}
+      .fineprint{font-size:13px;color:var(--ink-faint);margin:0 0 6px}
+      footer a{font-weight:600}
+
+      @media (max-width:760px){
+        .wrap{padding:0 16px}.wrap-narrow{padding:0 16px}
+        .topbar-brand{font-size:13.5px;min-width:0}
+        .topbar-brand small{display:none}
+        .topbar-brand .seal{width:28px;height:28px;font-size:14px}
+        .pill{font-size:11px;padding:5px 8px}
+        .hero-inner{padding:24px 16px 20px}
+        .hero h1{font-size:33px}
+        .hero .lede{font-size:15.5px;margin-bottom:18px}
+        .search-card{padding:10px;border-radius:16px}
+        .search-main input{font-size:17px;padding:15px 74px 15px 44px}
+        .kbd{display:none}
+        .chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+        .chips::-webkit-scrollbar{display:none}
+        .chip{white-space:nowrap}
+        .cards{grid-template-columns:1fr}
+        .steps{gap:6px 14px;font-size:12.5px;justify-content:center}
+        .sticky-count{display:none}
+        .contribute{padding:21px 19px}
+      }
+      @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.join-btn,.sticky-bar{transition:none;animation:none}}
+    </style>
+  </head>
+  <body id="top">
+    <div class="topbar">
+      <div class="wrap topbar-inner">
+        <div class="topbar-brand"><span class="seal">湘</span><span>Xiang Xiang Hunan Cuisine <small>Singapore Queue Links</small></span></div>
+        <span class="pill"><i></i> 15 queue links verified · 7 wanted</span>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="wrap-narrow hero-inner">
+        <p class="brandline">湘香湖南菜 · XIANG XIANG · SINGAPORE</p>
+        <h1>Skip the queue.<br /><span class="accent">Take your number before you go.</span></h1>
+        <p class="lede">Search below — each result opens that outlet&rsquo;s queue page on <strong>inline.app</strong>, the same page its in-store QR code opens. Take a number before you leave, head over when your turn is close.</p>
+
+        <div class="search-card" id="search-card">
+          <div class="search-main">
+            <svg class="search-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="search" type="search" placeholder="Search outlet, mall or area — try &ldquo;NEX&rdquo;" aria-label="Search outlets" autocomplete="off" enterkeyhint="search" />
+            <button class="clear-btn" id="clear-search" type="button" aria-label="Clear search">&times;</button>
+            <span class="kbd" aria-hidden="true">/</span>
+          </div>
+          <div class="search-meta">
+            <p class="result-count" id="result-count" aria-live="polite"></p>
+            <div class="popular" aria-label="Popular searches"><span>Popular:</span>
+              <button type="button" data-q="NEX">NEX</button>
+              <button type="button" data-q="VivoCity">VivoCity</button>
+              <button type="button" data-q="Sengkang">Sengkang</button>
+              <button type="button" data-q="Bugis">Bugis</button>
+              <button type="button" data-q="Orchard">Orchard</button>
+            </div>
+          </div>
+          <div class="chips" id="chips" role="group" aria-label="Filter by region"></div>
+        </div>
+
+        <ul class="steps" aria-label="How it works">
+          <li><b>1</b> Search your outlet</li>
+          <li><b>2</b> Tap &ldquo;Join the queue&rdquo;</li>
+          <li><b>3</b> Head over when your number nears</li>
+        </ul>
+        <p class="hero-cta">At an outlet marked <strong>&ldquo;Queue link wanted&rdquo;</strong>? <a href="#contribute">Help complete the list &rarr;</a></p>
+      </div>
+    </header>
+
+    <div class="sticky-bar" id="sticky-bar" aria-hidden="true">
+      <div class="wrap sticky-inner">
+        <span class="seal">湘</span>
+        <input id="search-sticky" type="search" placeholder="Search outlets…" aria-label="Search outlets" autocomplete="off" tabindex="-1" />
+        <span class="sticky-count" id="sticky-count"></span>
+      </div>
+    </div>
+
+    <main class="wrap">
+      <div class="empty" id="empty">
+        <p class="big">🌶️</p>
+        <h2>No outlets match that search</h2>
+        <p>Try a mall name like &ldquo;VivoCity&rdquo;, or an area like &ldquo;Jurong&rdquo; or &ldquo;Sengkang&rdquo;. Check spelling — or browse all outlets below.</p>
+        <button type="button" id="reset-filters">Show all 22 outlets</button>
+      </div>
+      <div id="groups"></div>
+
+      <section class="contribute" id="contribute">
+        <h2>7 outlets are still missing their queue link. <span class="accent">Seen one? Share it.</span></h2>
+        <p>Chinatown, Suntec City, Pasir Ris Mall, Lot One, Compass One, Hougang Mall and Mandai Zoo aren&rsquo;t on Xiang Xiang&rsquo;s inline booking list, so their queue links can only come from the QR signs at their entrances — that&rsquo;s exactly how the Sengkang Grand link on this page was found.</p>
+        <ol>
+          <li><strong>At the outlet</strong>, look for the &ldquo;Scan QR code to get queue number&rdquo; sign near the entrance.</li>
+          <li><strong>Scan it</strong> and copy the <strong>inline.app</strong> link it opens — or just take a clear photo of the QR sign.</li>
+          <li><strong>Send it in</strong> with the button on that outlet&rsquo;s card above: paste the link, or attach the photo and we&rsquo;ll decode the QR for you.</li>
+        </ol>
+        <div class="cta-row">
+          <a class="cta-btn" id="contribute-general" href="#" target="_blank" rel="noopener">Contribute a queue link</a>
+          <span style="font-size:13.5px;color:var(--ink-faint)">Opens a pre-filled GitHub issue — free GitHub account needed.</span>
+        </div>
+        <p class="fine">Please don&rsquo;t include booking confirmations, phone numbers or anything personal — just the public queue link or the QR photo. Every link is checked live before it&rsquo;s added here.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p class="fineprint">Unofficial shortcut list, not affiliated with Xiang Xiang Hunan Cuisine or inline.app. All 15 queue links were verified live on inline.app on 3 November 2026; the queue for each outlet opens during its service hours. Addresses and phone numbers are from public listings for the Singapore outlets named.</p>
+        <p class="fineprint">Sister site: <a href="https://dtf.danielquek.com/" target="_blank" rel="noopener">Din Tai Fung Singapore Queue Links</a> · Corrections and contributions welcome via <a href="https://github.com/blurboy1985/xiang-xiang/issues" target="_blank" rel="noopener">GitHub Issues</a>.</p>
+      </div>
+    </footer>
+
+    <script>
+      "use strict";
+      var COMPANY = "-NSEoNHckiJCKJnKNzD4:inline-live-3";
+      var REPO_ISSUES = "https://github.com/blurboy1985/xiang-xiang/issues/new";
+      var REGIONS = [
+        {key:"central", label:"Central"},
+        {key:"south", label:"South"},
+        {key:"north", label:"North"},
+        {key:"northeast", label:"North-East"},
+        {key:"east", label:"East"},
+        {key:"west", label:"West"}
+      ];
+      var regionLabel = {}; REGIONS.forEach(function(rg){ regionLabel[rg.key]=rg.label; });
+
+      /* id = inline branch id. Outlets without an id have no verified queue link yet. */
+      var OUTLETS = [
+        {n:"Sengkang Grand Mall", r:"northeast", a:"70 Compassvale Bow, #01-32, Singapore 544692", p:"6908 8121", id:"-NSEoNU7vvPlpO-MPJMp"},
+        {n:"Compass One", r:"northeast", a:"1 Sengkang Square, #03-12 Compass One, Singapore 545078", p:"6676 6642", id:null},
+        {n:"Hougang Mall", r:"northeast", a:"90 Hougang Ave 10, #02-25 Hougang Mall, Singapore 538766", p:"6518 9897", id:null},
+        {n:"NEX", r:"northeast", a:"23 Serangoon Central, #B1-41/42/43, Singapore 556083", p:"", id:"-NtUb6LdQ_I0HfNHgqFc"},
+        {n:"Seletar Mall", r:"northeast", a:"33 Sengkang West Ave, #02-11/12 The Seletar Mall, Singapore 797653", p:"", id:"-O08fzfypFATy6Fti2sm"},
+        {n:"AMK Hub", r:"northeast", a:"53 Ang Mo Kio Ave 3, #02-26 AMK Hub, Singapore 569933", p:"6908 3866", id:"-OCHkbdc9uazjJQKxVvk"},
+        {n:"Bugis", r:"central", a:"1 Liang Seah St, #01-12/13/14, Singapore 189022", p:"6338 8939", id:"-NhBD4hvTndc2r3G0vcb"},
+        {n:"Chinatown", r:"central", a:"8 Mosque St, #08/09/10, Singapore 059488", p:"6225 5968", id:null},
+        {n:"Suntec City", r:"central", a:"3 Temasek Blvd, #B1-159 Suntec City Mall (Tower 3), Singapore 038983", p:"6908 3889", id:null},
+        {n:"313@somerset", r:"central", a:"313 Orchard Rd, #B3-02 to 06, Singapore 238895", p:"6883 5866", id:"-OfYnFZAzCCBFExR9jH1"},
+        {n:"One Holland Village", r:"central", a:"7 Holland Village Way, #02-19/20, Singapore 275748", p:"", id:"-NkwxPBjDPPEgndNuZdy"},
+        {n:"VivoCity", r:"south", a:"1 HarbourFront Walk, #B2-28 VivoCity, Singapore 098585", p:"6908 2769", id:"-OhxKV7I0Fr82f9ixRV9"},
+        {n:"Bedok Mall", r:"east", a:"311 New Upper Changi Rd, #01-15/16/16A Bedok Mall, Singapore 467360", p:"6286 6838", id:"-Noz1zn6N2te5Tm4YpmI"},
+        {n:"Parkway Parade", r:"east", a:"80 Marine Parade Rd, #01-30 Parkway Parade, Singapore 449269", p:"9137 4773", id:"-Oilp6At_QCgBgiOvzoe"},
+        {n:"Pasir Ris Mall", r:"east", a:"7 Pasir Ris Central, #02-60 Pasir Ris Mall, Singapore 519612", p:"6970 6856", id:null},
+        {n:"Causeway Point", r:"north", a:"1 Woodlands Square, #05-09 Causeway Point, Singapore 738099", p:"6514 8868", id:"-O2U-dLW3i3QKXFPfaaB"},
+        {n:"Northpoint City", r:"north", a:"930 Yishun Ave 2, #02-15/16/17 Northpoint City, Singapore 769098", p:"", id:"-OAqeuttMuKFKz6DBkz8"},
+        {n:"Mandai Zoo", r:"north", a:"80 Mandai Lake Rd, #01-06 Dining Alley, Mandai Wildlife East, Singapore 729826", p:"6883 5886", id:null},
+        {n:"Westgate", r:"west", a:"3 Gateway Dr, #04-42 Westgate, Singapore 608532", p:"", id:"-NxGm9lndbVXMCNjAJBj"},
+        {n:"Jurong Point", r:"west", a:"63 Jurong West Central 3, #B1-46 Jurong Point, Singapore 648331", p:"", id:"-O4sFw_LT842-haaL4gv"},
+        {n:"Hillion Mall", r:"west", a:"17 Petir Rd, #B1-64/65 Hillion Mall, Singapore 678278", p:"", id:"-O_u8B6dcGBELyPHt19p"},
+        {n:"Lot One", r:"west", a:"21 Choa Chu Kang Ave 4, #02-18/19/20 Lot One, Singapore 689812", p:"", id:null}
+      ];
+      var TOTAL = OUTLETS.length;
+      var WITH_QUEUE = OUTLETS.filter(function(o){ return !!o.id; }).length;
+      var WANTED = TOTAL - WITH_QUEUE;
+
+      function queueURL(o){ return "https://inline.app/" + COMPANY + "/" + o.id + "/waiting"; }
+      function bookingURL(o){ return "https://inline.app/booking/" + COMPANY + "/" + o.id; }
+      function mapsURL(o){ return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Xiang Xiang Hunan Cuisine " + o.n + ", " + o.a); }
+      function contribURL(o){
+        var title, body;
+        if(o){
+          title = "Queue link for " + o.n;
+          body = "Outlet: " + o.n + "\nAddress: " + o.a + "\n\nThe inline.app queue (waiting) link for this outlet — the link its in-store queue QR code opens — is:\n\n(paste the link here, or attach a clear photo of the queue QR sign at the entrance and we'll decode it)\n\nHow I got it: (e.g. scanned the QR sign at the entrance on <date>)\n";
+        } else {
+          title = "Queue link contribution";
+          body = "Outlet: \n\nThe inline.app queue (waiting) link — the link its in-store queue QR code opens — is:\n\n(paste the link here, or attach a clear photo of the queue QR sign at the entrance and we'll decode it)\n";
+        }
+        return REPO_ISSUES + "?title=" + encodeURIComponent(title) + "&body=" + encodeURIComponent(body);
+      }
+      document.getElementById("contribute-general").href = contribURL(null);
+
+      var searchInput = document.getElementById("search");
+      var stickyInput = document.getElementById("search-sticky");
+      var clearBtn = document.getElementById("clear-search");
+      var chipsBox = document.getElementById("chips");
+      var groupsBox = document.getElementById("groups");
+      var emptyBox = document.getElementById("empty");
+      var resultCount = document.getElementById("result-count");
+      var stickyCount = document.getElementById("sticky-count");
+      var activeRegion = "all", showSavedOnly = false, showWantedOnly = false;
+
+      var favs = {};
+      try { favs = JSON.parse(localStorage.getItem("xx-favs") || "{}") || {}; } catch(e){ favs = {}; }
+      function saveFavs(){ try { localStorage.setItem("xx-favs", JSON.stringify(favs)); } catch(e){} }
+
+      function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+      function hi(text, q){
+        var out = esc(text);
+        if(!q) return out;
+        q.trim().split(/\s+/).forEach(function(w){
+          if(!w) return;
+          var rx = new RegExp("(" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig");
+          out = out.replace(rx, "<mark>$1</mark>");
+        });
+        return out;
+      }
+
+      function cardHTML(o, q){
+        var saved = !!favs[o.n];
+        var html = '<article class="card' + (o.id ? "" : " missing") + '">';
+        html += '<div class="card-top"><h3>' + hi(o.n, q) + '</h3>';
+        html += o.id ? '<span class="badge ok">Queue link ✓</span>' : '<span class="badge wanted">Queue link wanted</span>';
+        html += '<button type="button" class="star' + (saved ? " on" : "") + '" data-star="' + esc(o.n) + '" aria-label="Save ' + esc(o.n) + '" aria-pressed="' + saved + '">' + (saved ? "★" : "☆") + '</button></div>';
+        html += '<p class="addr">' + hi(o.a, q) + '</p>';
+        if(o.p){ html += '<p class="phone">☎ <a href="tel:+65' + o.p.replace(/\s/g,"") + '">' + esc(o.p) + '</a></p>'; }
+        html += '<div class="card-actions">';
+        if(o.id){
+          html += '<a class="join-btn" href="' + queueURL(o) + '" target="_blank" rel="noopener">Join the queue →</a>';
+          html += '<div class="sub-actions">';
+          html += '<button type="button" data-copy="' + queueURL(o) + '">Copy queue link</button>';
+          html += '<a href="' + bookingURL(o) + '" target="_blank" rel="noopener">Book a table</a>';
+          html += '<a href="' + mapsURL(o) + '" target="_blank" rel="noopener">Directions</a>';
+          if(o.p){ html += '<a href="tel:+65' + o.p.replace(/\s/g,"") + '">Call</a>'; }
+          html += '</div>';
+        } else {
+          html += '<p class="missing-note">This outlet isn&rsquo;t on the inline booking list, so its queue link can only come from the QR sign at its entrance.</p>';
+          html += '<a class="contrib-btn" href="' + contribURL(o) + '" target="_blank" rel="noopener">Contribute this queue link</a>';
+          html += '<div class="sub-actions">';
+          html += '<a href="' + mapsURL(o) + '" target="_blank" rel="noopener">Directions</a>';
+          if(o.p){ html += '<a href="tel:+65' + o.p.replace(/\s/g,"") + '">Call</a>'; }
+          html += '</div>';
+        }
+        html += '</div></article>';
+        return html;
+      }
+
+      function renderChips(){
+        var counts = {all: TOTAL};
+        REGIONS.forEach(function(rg){ counts[rg.key] = 0; });
+        OUTLETS.forEach(function(o){ counts[o.r]++; });
+        var favCount = Object.keys(favs).length;
+        var html = '<button type="button" class="chip" data-region="all" aria-pressed="' + (activeRegion==="all" && !showSavedOnly && !showWantedOnly) + '">All <span class="n">' + counts.all + '</span></button>';
+        REGIONS.forEach(function(rg){ html += '<button type="button" class="chip" data-region="' + rg.key + '" aria-pressed="' + (activeRegion===rg.key && !showSavedOnly && !showWantedOnly) + '">' + esc(rg.label) + ' <span class="n">' + counts[rg.key] + '</span></button>'; });
+        html += '<button type="button" class="chip saved-chip" data-region="__saved" aria-pressed="' + showSavedOnly + '">★ Saved <span class="n">' + favCount + '</span></button>';
+        html += '<button type="button" class="chip wanted-chip" data-region="__wanted" aria-pressed="' + showWantedOnly + '">⚑ Wanted <span class="n">' + WANTED + '</span></button>';
+        chipsBox.innerHTML = html;
+      }
+
+      function getFiltered(){
+        var q = searchInput.value.trim().toLowerCase();
+        return OUTLETS.filter(function(o){
+          if(showSavedOnly && !favs[o.n]) return false;
+          if(showWantedOnly && o.id) return false;
+          if(!showSavedOnly && !showWantedOnly && activeRegion!=="all" && o.r!==activeRegion) return false;
+          if(!q) return true;
+          var hay = (o.n + " " + o.a + " " + (regionLabel[o.r]||"")).toLowerCase();
+          return q.split(/\s+/).every(function(w){ return hay.indexOf(w)!==-1; });
+        });
+      }
+
+      function render(){
+        var q = searchInput.value.trim();
+        var filtered = getFiltered();
+        var byRegion = {}; filtered.forEach(function(o){ (byRegion[o.r] = byRegion[o.r] || []).push(o); });
+        var html = "";
+        REGIONS.forEach(function(rg){
+          var list = byRegion[rg.key]; if(!list || !list.length) return;
+          html += '<section class="group" aria-label="' + esc(rg.label) + '"><div class="group-head"><h2>' + esc(rg.label) + '</h2><span class="count">' + list.length + (list.length===1 ? ' outlet' : ' outlets') + '</span></div><div class="cards">';
+          list.forEach(function(o){ html += cardHTML(o, q); });
+          html += '</div></section>';
+        });
+        groupsBox.innerHTML = html;
+        emptyBox.classList.toggle("on", filtered.length===0);
+        if(q || activeRegion!=="all" || showSavedOnly || showWantedOnly){
+          resultCount.innerHTML = "<b>" + filtered.length + "</b> of " + TOTAL + " outlets" + (showSavedOnly ? " · Saved" : "") + (showWantedOnly ? " · Queue link wanted" : "");
+        } else {
+          resultCount.innerHTML = "<b>" + TOTAL + "</b> outlets · <b>" + WITH_QUEUE + "</b> with queue links · <b>" + WANTED + "</b> wanted";
+        }
+        stickyCount.innerHTML = "<b>" + filtered.length + "</b> outlets";
+        clearBtn.classList.toggle("on", !!q);
+        renderChips();
+      }
+
+      function syncInputs(src){
+        var other = (src === searchInput) ? stickyInput : searchInput;
+        if(other.value !== src.value){ other.value = src.value; }
+        render();
+      }
+      searchInput.addEventListener("input", function(){ syncInputs(searchInput); });
+      stickyInput.addEventListener("input", function(){ syncInputs(stickyInput); });
+      clearBtn.addEventListener("click", function(){ searchInput.value=""; syncInputs(searchInput); searchInput.focus(); });
+
+      document.querySelectorAll(".popular button").forEach(function(b){
+        b.addEventListener("click", function(){ searchInput.value = b.getAttribute("data-q"); syncInputs(searchInput); document.getElementById("search-card").scrollIntoView({behavior:"smooth", block:"center"}); });
+      });
+
+      chipsBox.addEventListener("click", function(e){
+        var b = e.target.closest("button.chip"); if(!b) return;
+        var r = b.getAttribute("data-region");
+        if(r === "__saved"){ showSavedOnly = !showSavedOnly; showWantedOnly = false; }
+        else if(r === "__wanted"){ showWantedOnly = !showWantedOnly; showSavedOnly = false; }
+        else { activeRegion = r; showSavedOnly = false; showWantedOnly = false; }
+        render();
+      });
+
+      groupsBox.addEventListener("click", function(e){
+        var star = e.target.closest("[data-star]");
+        if(star){
+          var name = star.getAttribute("data-star");
+          if(favs[name]){ delete favs[name]; } else { favs[name] = 1; }
+          saveFavs(); render(); return;
+        }
+        var cp = e.target.closest("[data-copy]");
+        if(cp){
+          var url = cp.getAttribute("data-copy");
+          function done(){ cp.textContent = "Copied ✓"; cp.classList.add("copied"); setTimeout(function(){ cp.textContent = "Copy queue link"; cp.classList.remove("copied"); }, 1600); }
+          if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(url).then(done, done); }
+          else {
+            var ta = document.createElement("textarea"); ta.value = url; document.body.appendChild(ta); ta.select();
+            try { document.execCommand("copy"); } catch(err){}
+            document.body.removeChild(ta); done();
+          }
+        }
+      });
+
+      document.getElementById("reset-filters").addEventListener("click", function(){
+        searchInput.value = ""; stickyInput.value = ""; activeRegion = "all"; showSavedOnly = false; showWantedOnly = false; render();
+      });
+
+      document.addEventListener("keydown", function(e){
+        if(e.key === "/" && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)){
+          e.preventDefault(); searchInput.focus(); searchInput.select();
+        }
+      });
+
+      /* Sticky bar visibility */
+      var stickyBar = document.getElementById("sticky-bar");
+      var heroCard = document.getElementById("search-card");
+      if("IntersectionObserver" in window){
+        new IntersectionObserver(function(entries){
+          var past = !entries[0].isIntersecting && entries[0].boundingClientRect.top < 0;
+          stickyBar.classList.toggle("on", past);
+          stickyBar.setAttribute("aria-hidden", past ? "false" : "true");
+          stickyInput.tabIndex = past ? 0 : -1;
+        }, {threshold: 0}).observe(heroCard);
+      }
+
+      render();
+    </script>
+  </body>
+</html>
