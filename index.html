@@ -118,7 +118,7 @@
       .card-actions{margin-top:auto;padding-top:9px;display:flex;flex-direction:column;gap:9px}
       .join-btn{display:block;text-align:center;background:var(--chili);color:#fff;font-weight:800;font-size:16px;border-radius:12px;padding:13px 14px;text-decoration:none;box-shadow:var(--shadow-sm)}
       .join-btn:hover{background:var(--chili-deep)}
-      .contrib-btn{display:block;text-align:center;background:var(--bg-raise);color:var(--chili-deep);border:1.5px dashed var(--chili);font-weight:800;font-size:15.5px;border-radius:12px;padding:12px 14px;text-decoration:none}
+      .contrib-btn{display:block;width:100%;text-align:center;background:var(--bg-raise);color:var(--chili-deep);border:1.5px dashed var(--chili);font-weight:800;font-size:15.5px;border-radius:12px;padding:12px 14px;text-decoration:none;cursor:pointer}
       .contrib-btn:hover{background:var(--chili-tint)}
       @media (prefers-color-scheme:dark){.contrib-btn{color:var(--chili-deep)}}
       .sub-actions{display:flex;flex-wrap:wrap;gap:5px 14px;font-size:13.5px}
@@ -148,6 +148,16 @@
       @media (prefers-color-scheme:dark){.cta-btn{color:#12241a}}
       .cta-btn:hover{background:var(--green-hover)}
       .contribute .fine{font-size:13px;color:var(--ink-faint);margin:12px 0 0}
+      .submit-form{margin-top:4px}
+      .submit-form label{display:block;font-size:13.5px;font-weight:700;margin:13px 0 5px}
+      .submit-form select,.submit-form input{width:100%;font:inherit;font-size:16px;padding:12px 13px;border:1px solid var(--line-strong);border-radius:11px;background:var(--bg);color:var(--ink);outline:none}
+      .submit-form select:focus,.submit-form input:focus{border-color:var(--green);box-shadow:0 0 0 3px var(--green-tint)}
+      .submit-form .cta-row{margin-top:16px}
+      .submit-form button.cta-btn{border:0;cursor:pointer;font-size:16px}
+      .submit-form button.cta-btn:disabled{opacity:.6;cursor:wait}
+      .sub-status{margin:12px 0 0;font-size:14.5px;font-weight:600;min-height:1.2em}
+      .sub-status.ok{color:var(--green-deep)}
+      .sub-status.err{color:var(--chili)}
 
       footer{border-top:1px solid var(--line);margin-top:34px;padding:22px 0 34px}
       .fineprint{font-size:13px;color:var(--ink-faint);margin:0 0 6px}
@@ -215,7 +225,7 @@
           <li><b>2</b> Tap &ldquo;Join the queue&rdquo;</li>
           <li><b>3</b> Head over when your number nears</li>
         </ul>
-        <p class="hero-cta">At an outlet marked <strong>&ldquo;Queue link wanted&rdquo;</strong>? <a href="#contribute">Help complete the list &rarr;</a></p>
+        <p class="hero-cta">At an outlet marked <strong>&ldquo;Queue link wanted&rdquo;</strong>? <a href="#submit">Submit its queue link right here &rarr;</a></p>
       </div>
     </header>
 
@@ -236,33 +246,50 @@
       </div>
       <div id="groups"></div>
 
-      <section class="contribute" id="contribute">
-        <h2>7 outlets are still missing their queue link. <span class="accent">Seen one? Share it.</span></h2>
+      <section class="contribute" id="submit">
+        <h2>7 outlets are still missing their queue link. <span class="accent">Been there? Submit it here.</span></h2>
         <p>Chinatown, Suntec City, Pasir Ris Mall, Lot One, Compass One, Hougang Mall and Mandai Zoo aren&rsquo;t on Xiang Xiang&rsquo;s inline booking list, so their queue links can only come from the QR signs at their entrances — that&rsquo;s exactly how the Sengkang Grand link on this page was found.</p>
         <ol>
           <li><strong>At the outlet</strong>, look for the &ldquo;Scan QR code to get queue number&rdquo; sign near the entrance.</li>
-          <li><strong>Scan it</strong> and copy the <strong>inline.app</strong> link it opens — or just take a clear photo of the QR sign.</li>
-          <li><strong>Send it in</strong> with the button on that outlet&rsquo;s card above: paste the link, or attach the photo and we&rsquo;ll decode the QR for you.</li>
+          <li><strong>Scan it</strong> and copy the <strong>inline.app</strong> link it opens.</li>
+          <li><strong>Paste it below</strong> — no account, no sign-up. It goes straight to the site owner.</li>
         </ol>
-        <div class="cta-row">
-          <a class="cta-btn" id="contribute-general" href="#" target="_blank" rel="noopener">Contribute a queue link</a>
-          <span style="font-size:13.5px;color:var(--ink-faint)">Opens a pre-filled GitHub issue — free GitHub account needed.</span>
-        </div>
-        <p class="fine">Please don&rsquo;t include booking confirmations, phone numbers or anything personal — just the public queue link or the QR photo. Every link is checked live before it&rsquo;s added here.</p>
+        <form class="submit-form" id="submit-form" novalidate>
+          <label for="sub-outlet">Outlet</label>
+          <select id="sub-outlet" required>
+            <option value="Chinatown">Chinatown</option>
+            <option value="Suntec City">Suntec City</option>
+            <option value="Pasir Ris Mall">Pasir Ris Mall</option>
+            <option value="Lot One">Lot One</option>
+            <option value="Compass One">Compass One</option>
+            <option value="Hougang Mall">Hougang Mall</option>
+            <option value="Mandai Zoo">Mandai Zoo</option>
+          </select>
+          <label for="sub-url">Queue link (the inline.app link the QR code opens)</label>
+          <input id="sub-url" type="url" inputmode="url" placeholder="https://inline.app/…/waiting" required />
+          <label for="sub-name">Your name <span style="color:var(--ink-faint)">(optional)</span></label>
+          <input id="sub-name" type="text" placeholder="e.g. Alex" autocomplete="name" />
+          <input id="sub-website" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
+          <div class="cta-row">
+            <button class="cta-btn" id="sub-btn" type="submit">Submit queue link</button>
+          </div>
+          <p class="sub-status" id="sub-status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="fine">Please paste only the public queue link — no booking confirmations, phone numbers or anything personal. Every submitted link is checked live before it&rsquo;s added here.</p>
       </section>
     </main>
 
     <footer>
       <div class="wrap">
         <p class="fineprint">Unofficial shortcut list, not affiliated with Xiang Xiang Hunan Cuisine or inline.app. All 15 queue links were verified live on inline.app on 3 November 2026; the queue for each outlet opens during its service hours. Addresses and phone numbers are from public listings for the Singapore outlets named.</p>
-        <p class="fineprint">Sister site: <a href="https://dtf.danielquek.com/" target="_blank" rel="noopener">Din Tai Fung Singapore Queue Links</a> · Corrections and contributions welcome via <a href="https://github.com/blurboy1985/xiang-xiang/issues" target="_blank" rel="noopener">GitHub Issues</a>.</p>
+        <p class="fineprint">Sister site: <a href="https://dtf.danielquek.com/" target="_blank" rel="noopener">Din Tai Fung Singapore Queue Links</a> · Missing a queue link? <a href="#submit">Submit it here</a>.</p>
       </div>
     </footer>
 
     <script>
       "use strict";
       var COMPANY = "-NSEoNHckiJCKJnKNzD4:inline-live-3";
-      var REPO_ISSUES = "https://github.com/blurboy1985/xiang-xiang/issues/new";
+      var SUBMIT_ENDPOINT = "/api/submit";
       var REGIONS = [
         {key:"central", label:"Central"},
         {key:"south", label:"South"},
@@ -305,18 +332,12 @@
       function queueURL(o){ return "https://inline.app/" + COMPANY + "/" + o.id + "/waiting"; }
       function bookingURL(o){ return "https://inline.app/booking/" + COMPANY + "/" + o.id; }
       function mapsURL(o){ return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Xiang Xiang Hunan Cuisine " + o.n + ", " + o.a); }
-      function contribURL(o){
-        var title, body;
-        if(o){
-          title = "Queue link for " + o.n;
-          body = "Outlet: " + o.n + "\nAddress: " + o.a + "\n\nThe inline.app queue (waiting) link for this outlet — the link its in-store queue QR code opens — is:\n\n(paste the link here, or attach a clear photo of the queue QR sign at the entrance and we'll decode it)\n\nHow I got it: (e.g. scanned the QR sign at the entrance on <date>)\n";
-        } else {
-          title = "Queue link contribution";
-          body = "Outlet: \n\nThe inline.app queue (waiting) link — the link its in-store queue QR code opens — is:\n\n(paste the link here, or attach a clear photo of the queue QR sign at the entrance and we'll decode it)\n";
-        }
-        return REPO_ISSUES + "?title=" + encodeURIComponent(title) + "&body=" + encodeURIComponent(body);
+      function openSubmitFor(name){
+        var sel = document.getElementById("sub-outlet");
+        if(sel && name){ sel.value = name; }
+        document.getElementById("submit").scrollIntoView({behavior:"smooth", block:"start"});
+        setTimeout(function(){ document.getElementById("sub-url").focus({preventScroll:true}); }, 450);
       }
-      document.getElementById("contribute-general").href = contribURL(null);
 
       var searchInput = document.getElementById("search");
       var stickyInput = document.getElementById("search-sticky");
@@ -363,7 +384,7 @@
           html += '</div>';
         } else {
           html += '<p class="missing-note">This outlet isn&rsquo;t on the inline booking list, so its queue link can only come from the QR sign at its entrance.</p>';
-          html += '<a class="contrib-btn" href="' + contribURL(o) + '" target="_blank" rel="noopener">Contribute this queue link</a>';
+          html += '<button type="button" class="contrib-btn" data-submit-for="' + esc(o.n) + '">Submit this queue link</button>';
           html += '<div class="sub-actions">';
           html += '<a href="' + mapsURL(o) + '" target="_blank" rel="noopener">Directions</a>';
           if(o.p){ html += '<a href="tel:+65' + o.p.replace(/\s/g,"") + '">Call</a>'; }
@@ -443,6 +464,8 @@
       });
 
       groupsBox.addEventListener("click", function(e){
+        var sf = e.target.closest("[data-submit-for]");
+        if(sf){ openSubmitFor(sf.getAttribute("data-submit-for")); return; }
         var star = e.target.closest("[data-star]");
         if(star){
           var name = star.getAttribute("data-star");
@@ -483,6 +506,46 @@
           stickyInput.tabIndex = past ? 0 : -1;
         }, {threshold: 0}).observe(heroCard);
       }
+
+      /* In-site queue link submission (no account needed) */
+      var submitForm = document.getElementById("submit-form");
+      submitForm.addEventListener("submit", function(e){
+        e.preventDefault();
+        var outlet = document.getElementById("sub-outlet").value;
+        var url = document.getElementById("sub-url").value.trim();
+        var name = document.getElementById("sub-name").value.trim();
+        var status = document.getElementById("sub-status");
+        var btn = document.getElementById("sub-btn");
+        function show(msg, ok){ status.textContent = msg; status.className = "sub-status " + (ok ? "ok" : "err"); }
+        if(!/^https:\/\/inline\.app\/\S+\/waiting\/?$/.test(url)){
+          show("That doesn't look like an inline.app queue link — it should start with https://inline.app/ and end with /waiting.", false);
+          return;
+        }
+        btn.disabled = true; btn.textContent = "Sending…"; show("", true);
+        fetch(SUBMIT_ENDPOINT, {
+          method: "POST",
+          headers: {"Content-Type": "application/json", "Accept": "application/json"},
+          body: JSON.stringify({
+            outlet: outlet,
+            queue_link: url,
+            submitted_by: name || "(not given)",
+            website: document.getElementById("sub-website").value
+          })
+        }).then(function(res){
+          return res.json().catch(function(){ return {}; }).then(function(data){
+            if(res.ok && data.success !== false){
+              show("Thank you! The " + outlet + " queue link was received — it will be checked and added to this page.", true);
+              submitForm.reset();
+            } else {
+              show("The submission didn't go through (" + (data.message || "please try again") + "). Your link: " + url, false);
+            }
+          });
+        }).catch(function(){
+          show("The submission didn't go through — please check your connection and try again. Your link: " + url, false);
+        }).finally(function(){
+          btn.disabled = false; btn.textContent = "Submit queue link";
+        });
+      });
 
       render();
     </script>
