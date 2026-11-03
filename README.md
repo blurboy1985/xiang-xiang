@@ -4,7 +4,7 @@ A single-page site listing every Xiang Xiang Hunan Cuisine 湘香湖南菜 outle
 
 Sister site to [Din Tai Fung Singapore Queue Links](https://dtf.danielquek.com/).
 
-Planned domain: **xiangxiang.danielquek.com** (Cloudflare Pages, Git-connected — same setup as dtf.danielquek.com).
+Live at: **https://xiangxiang.danielquek.com/** (Cloudflare Pages project `xiang-xiang`, Git-connected to this repo, production branch `master`, no build command, root output — same setup as dtf.danielquek.com. Also at https://xiang-xiang.pages.dev/.)
 
 ## The list
 
